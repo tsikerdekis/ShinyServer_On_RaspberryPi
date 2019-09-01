@@ -26,13 +26,7 @@ sudo apt-get -y install r-cran-later r-cran-httpuv r-cran-shiny r-cran-plotly r-
 
 
 # Install cmake: https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source#what-if-a-sufficiently-recent-version-of-cmake-isnt-available
-wget http://www.cmake.org/files/v2.8/cmake-2.8.11.2.tar.gz
-tar xzf cmake-2.8.11.2.tar.gz
-cd cmake-2.8.11.2
-./configure
-make
-sudo make install
-sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt install cmake
 
 ## Return to home directory
 cd
