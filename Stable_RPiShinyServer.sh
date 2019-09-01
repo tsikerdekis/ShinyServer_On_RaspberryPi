@@ -1,4 +1,4 @@
-# Install R Shiny Server (stable) on Raspberry Pi 3, tested January 16, 2018
+# Install R Shiny Server (stable) on Raspberry Pi 4, tested August 31, 2019
 # As per: https://github.com/rstudio/shiny-server/issues/347
 # and: https://www.rstudio.com/products/shiny/download-server/
 # and: https://cloud.r-project.org/bin/linux/debian/#debian-stretch-stable
@@ -31,14 +31,7 @@ sudo su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/'
 sudo su - -c "R -e \"install.packages('plotly', repos='https://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('rmarkdown', repos='https://cran.rstudio.com/')\""
 
-# Install cmake: https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source#what-if-a-sufficiently-recent-version-of-cmake-isnt-available
-wget http://www.cmake.org/files/v2.8/cmake-2.8.11.2.tar.gz
-tar xzf cmake-2.8.11.2.tar.gz
-cd cmake-2.8.11.2
-./configure
-make
-sudo make install
-sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt-get -y install cmake
 
 ## Return to home directory
 cd
