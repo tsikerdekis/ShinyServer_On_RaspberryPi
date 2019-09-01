@@ -23,7 +23,7 @@ sudo apt-get -y install pandoc
 # Install R Packages
 ## later (as per https://github.com/r-lib/later/issues/73)
 git clone https://github.com/r-lib/later.git
-sed -i -e 's/PKG_LIBS = -pthread/PKG_LIBS = -pthread -lboost_atomic/g' later/src/Makevars
+sed -i -e 's/PKG_LIBS = -pthread/PKG_LIBS = -pthread -latomic/g' later/src/Makevars
 sudo R CMD INSTALL later
 
 sudo su - -c "R -e \"install.packages('httpuv', repos='https://cran.rstudio.com/')\""
