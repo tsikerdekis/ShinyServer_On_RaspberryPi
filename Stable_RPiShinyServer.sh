@@ -38,7 +38,7 @@ git clone https://github.com/rstudio/shiny-server.git
 ## Edit external/node/install-node.sh for ARM processor
 cd shiny-server/
 ### update NODE_SHA256 as per: https://nodejs.org/dist/v8.11.3/SHASUMS256.txt
-sed -i -e 's/08e2fcfea66746bd966ea3a89f26851f1238d96f86c33eaf6274f67fce58421a/a2fcc2e1827d7a034f39aad8225b4dd72376ad19f7a7884645a512aeeedf4ab5/g' external/node/install-node.sh
+sed -i -e 's/faddbe418064baf2226c2fcbd038c3ef4ae6f936eb952a1138c7ff8cfe862438/a2fcc2e1827d7a034f39aad8225b4dd72376ad19f7a7884645a512aeeedf4ab5/g' external/node/install-node.sh
 ### update NODE_FILENAME
 sed -i -e 's/x64/armv7l/g' external/node/install-node.sh
 
