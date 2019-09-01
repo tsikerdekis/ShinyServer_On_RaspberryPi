@@ -22,12 +22,8 @@ sudo apt-get -y install pandoc
 
 # Install R Packages
 ## later (as per https://github.com/r-lib/later/issues/73)
-sudo apt-get -y install r-cran-later
+sudo apt-get -y install r-cran-later r-cran-httpuv r-cran-shiny r-cran-plotly r-cran-rmarkdown
 
-sudo su - -c "R -e \"install.packages('httpuv', repos='https://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('plotly', repos='https://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('rmarkdown', repos='https://cran.rstudio.com/')\""
 
 # Install cmake: https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source#what-if-a-sufficiently-recent-version-of-cmake-isnt-available
 wget http://www.cmake.org/files/v2.8/cmake-2.8.11.2.tar.gz
