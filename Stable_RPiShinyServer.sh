@@ -22,9 +22,7 @@ sudo apt-get -y install pandoc
 
 # Install R Packages
 ## later (as per https://github.com/r-lib/later/issues/73)
-git clone https://github.com/r-lib/later.git
-sed -i -e 's/PKG_LIBS = -pthread/PKG_LIBS = -pthread -lboost_atomic/g' later/src/Makevars
-sudo R CMD INSTALL later
+sudo apt-get -y install r-cran-later
 
 sudo su - -c "R -e \"install.packages('httpuv', repos='https://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
